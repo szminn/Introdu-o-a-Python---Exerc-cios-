@@ -1,0 +1,117 @@
+#crie um programa que leia um número e diga se ele é positivo ou negativo.
+
+N = int(input("Entre com um número inteiro: "))
+if N >= 0:
+  print("Positivo")
+else:
+  print("Negativo")
+
+#crie um programa que leia um número inteiro e diga se ele é par ou ímpar.
+
+N = int(input("Entre com um número inteiro: "))
+if N%2 == 0:  # teste se o resto da divisão de N por 2 resulta em 0
+  print("Par")
+else:
+  print("Ímpar")
+
+#crie um programa que leia um ano e diga se ele é bissexto ou não. De acordo com a Wikipedia, o ano bissexto segue essa regra:
+
+no = int(input('Entre com o ano (4 dígitos): '))
+if ano%400 == 0:
+  print('É bissexto')
+elif ano%4 == 0 and ano%100 != 0:
+  print('É bissexto')
+else:
+  print('Não é bissexto')
+
+#escreva um programa que calcule e mostre as raízes reais de uma equação de segundo grau (a.x² + b.x + c = 0), com base nos valores de a, b e c.
+
+import math
+a = int(input('Digite o coeficiente A : '))
+b = int(input('Digite o coeficiente B : '))
+c = int(input('Digite o coeficiente C : '))
+delta = (b*b)-4*a*c
+if a == 0:
+  print('Não é equação de 2º grau!')
+elif delta > 0 :
+    x1= (-b + math.sqrt(delta)) / (2*a)
+    x2= (-b - math.sqrt(delta)) / (2*a)
+    print('x1=', x1, "x2", x2) 
+elif delta == 0:
+  x1= -b/(2*a)
+  print('x=',x1)
+else:
+  print('Não tem raizes reais')
+
+  #cálculo do Índice de Massa Corporal (IMC):
+
+peso = float(input('Entre com seu peso (em kg): '))
+altura = float(input('Entre com sua altura (em m): '))
+imc = peso / altura**2  # ** corresponde à potenciação
+print('Seu IMC vale', imc)
+# observe agora a formatação que limita o número de casas decimais após o ponto
+print(f'Seu IMC vale {imc:.2f}')
+if imc < 18.5:
+  print('Magro de ruim....')
+elif imc < 25:
+  print('Normal....')
+elif imc < 30:
+  print('Fortinho....')
+elif imc < 40:
+  print('Fortão....')
+else:
+  print('Bariátrica já!!!!')
+  
+'''Fomos convidados a trabalhar em uma empresa que fabrica GPS para 
+turistas de eco-turismo. O equipamento que estão criando tira 3 
+medidas de altitude espaçadas por alguns segundos. Crie um programa 
+em C que leia (pelo teclado) três valores numéricos inteiros e informe 
+se o usuário do GPS está subindo (sequência estritamente crescente),
+ descendo (sequência estritamente decrescente), se está num plano
+ (valores idênticos), ou nenhuma das opções
+ anteriores (desce depois sobe, sobe depois desce, etc.). Exemplo:
+'''
+
+a = int(input('A= : '))
+b = int(input('B= : '))
+c = int(input('C= : '))
+
+if a ==b and b==c :
+  print('Plano')
+elif a<b and a<c:
+    print('Subindo') 
+elif a>b and b>c:
+  print('Descendo')
+else:
+  print('N.D.A')
+
+'''Uma escola usa o seguinte critério de notas em seus cursos: 
+os alunos fazem três avaliações e a nota final é sempre calculada 
+assim: faço a média aritmética entre a menor e a maior das notas. 
+Crie um programa que leia 3 números reais, como sendo as notas de 
+um aluno, as quais podem ser digitadas em qualquer ordem, e imprima 
+a nota final, de acordo com o critério da escola. Exemplos:'''
+
+#entrada de dados
+a = float(input('Entre com a primeira nota: '))
+b = float(input('Entre com a segunda nota:'))
+c = float(input('Entre com a terceira nota: '))
+
+#processamento
+
+maior = a
+if b>maior:
+  maior = b
+if c>maior:
+  maior = c
+
+menor = a
+if b<menor:
+  menor = b
+if c<menor:
+  menor = c
+
+media = (maior + menor)/2
+
+#saída de dados
+print('A média foi:', media)

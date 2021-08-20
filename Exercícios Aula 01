@@ -1,0 +1,62 @@
+# Faça um programa que converta reais em dólares.
+ 
+dolares = float ( input ( "Entre com o valor em dólares:" ) )
+reais = dolares * 5,23
+imprimir ( 'US $' , dolares , 'equivalente a R $' , reais )
+ 
+# Faça um programa que calcule uma área de um retângulo e seu perímetro com base em seus dois lados.
+ 
+b = float ( input ( "Entre com o valor da base:" ) )
+h = float ( input ( "Entre com o valor da altura:" ) )
+Área = b * h
+imprimir ( 'Área do retângulo:' , Área , 'm²' )
+perímetro = b * 2 + h * 2
+imprimir ( 'Perímetro do retângulo:' , perímetro , 'm²' )
+ 
+# Faça um programa que converta a temperatura de graus Celsius para graus Fahrenheit.
+ 
+F = flutuante ( entrada ( "Temperatura em Fahrenheit:" ) )
+F = F- 32
+F = F / 9
+C = 5
+R = F * C
+imprimir ( 'Equivalem a' , R , 'Graus Celsius' )
+ 
+# Faça um programa que converta a temperatura de graus Fahrenheit para graus Celsius.
+ 
+C = flutuante ( entrada ( "Temperatura em graus Celsius:" ) )
+C = C / 5
+C = C * 9
+F = C + 32
+imprimir ( 'Equivalem a' , F , 'graus Fahrenheit' )
+ 
+# Faça um programa que calcule o Índice de Massa Corporal (IMC) com base no peso e altura do indivíduo:
+ 
+peso = float ( input ( "Entre com o valor do peso:" ) )
+altura = float ( input ( "Entre com o valor da altura:" ) )
+imc = peso / altura ** 2
+imprimir ( 'Seu Índice de Massa Corporal é' , imc )
+ 
+ 
+# Faça um programa que calcule uma área de um triângulo com base em sua base e sua altura.
+ 
+b = float ( input ( "Entre com o valor da base:" ) )
+h = float ( input ( "Entre com o valor da altura:" ) )
+área = b * h / 2
+imprimir ( 'A área dO triângulo é' , área , 'm²' )
+ 
+# Faça um programa que calcule a área de um triângulo com base em seus três lados (fórmula de Herão ou Hierão). Sendo a, bec os lados:
+ 
+a = float ( input ( "Entre com o valor do lado 1:" ) )
+b = float ( input ( "Entre com o valor do lado 2:" ) )
+c = float ( input ( "Entre com o valor do lado 3:" ) )
+p = a + b + c
+p = p / 2
+ 
+Área = p * ( pa ) * ( pb ) * ( pc )
+raiz_quadrada = Área ** 0,5
+ 
+impressão ( 'P =' , p )
+impressão ( 'Área = Raiz Quadrada de' , Área )
+print ( 'Resultado da Raiz =' , round ( raiz_quadrada , 2 ) )
+ 

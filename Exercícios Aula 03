@@ -1,0 +1,46 @@
+#Crie um programa que calcule e mostre na tela o valor da expressão:
+
+a) 2 + 4 + 6 + 8 + ... 998 + 1000 (= 250500)
+soma = 0
+for y in range(2, 1001, 2):
+  soma = soma + y
+print('O resultado da soma vale', soma)
+
+#Escrever um algoritmo que escreve o quadrado de todos os inteiros, desde 1 até 20.
+
+for i in range(1, 21, 1): 
+  print('o valor do quadrado de', i,'é',i*i)
+
+#Escrever um algoritmo que lê um número inteiro positivo e que escreve a soma dos quadrados de todos os números inteiros, desde 0 até o valor lido.
+
+n = int(input('Entre com um número inteiro positivo:'))
+soma = 0
+for y in range(n+1):
+  soma = soma + y*y 
+  print('Parcela', n*n)
+print('Resultado', soma )
+
+#Escrever um algortimo que lê o valor do primeiro termo e o valorda razão de uma P.A. (progressão artimética), calcula e escreve os 25 primeiros termos dessa P.A.
+
+inicio = int(input('digite o valor do inicio: '))
+razão = int(input('digite o valor da razão: '))
+for i in range(25):
+  print(inicio)
+  inicio = inicio + razão 
+
+#Escrever um algortimo que lê o valor do primeiro termo e o valor da razão de uma P.G. (progressão geométrica), calcula e escreve os 25 primeiros termos dessa P.G.
+
+termo = int(input('entre com o primeiro termo:'))
+razão = int(input('entre com a razão:'))
+for p in range(1, 25, 1):
+  print(termo)
+  termo = termo * razão
+print(termo)
+
+#Escrever um algoritmo que lê um número inteiro não-negativo e que calcule e escreva o valor do fatorial desse número.
+
+k = int(input('Digite um número inteiro positivo: '))
+produto = 1
+for i in range(1,k+1):
+  produto = produto * i
+print(produto)

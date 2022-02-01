@@ -1,0 +1,69 @@
+Matrizes e Recursividade
+7) Ache as somas dos valores das linhas de uma matriz (faça do jeito raiz, ou seja, for dentro de for.. soma cumulativa... Do jeito Nutella foi feito abaixo).
+Do jeito Nutella é assim:
+
+import numpy as np
+A = np.matrix( [[3, 6, 4, 2],
+             	        [1, 2, 3, 4],
+            	      [2, 4, 5, 8]] )
+print(A.sum(axis=1)) # o que será esse axis=1, hein?!
+[[15] [10] [19]]
+
+R:axis = 1 (ou axis = 'columns') é o eixo vertical. 
+
+import numpy as np
+A = np.matrix( [[3, 6, 4, 2],
+                [1, 2, 3, 4],
+                [2, 4, 5, 8]] )
+soma = 0
+for l in range(A.shape[0]):  
+  for c in range(A.shape[1]):  
+    soma = A.item((l,c))
+print(A.sum(axis=1))
+
+[[15]
+ [10]
+ [19]]
+
+
+7) Ache as somas dos valores das colunas de uma matriz (faça do jeito raiz, ou seja, for dentro de for.. soma cumulativa... Do jeito Nutella foi feito abaixo).
+# Do jeito Nutella é assim:
+
+import numpy as np
+A = np.matrix( [[3, 6, 4, 2],
+                [1, 2, 3, 4],
+                [2, 4, 5, 8]] )
+print(A.sum(axis=0)) # o que será esse axis=0, hein?!
+[[ 6 12 12 14]]
+
+R:axis = 0 ou axis = 'linhas' é o eixo horizontal. 
+
+import numpy as np
+A = np.matrix( [[3, 6, 4, 2],
+                [1, 2, 3, 4],
+                [2, 4, 5, 8]] )
+soma = 0
+for l in range(A.shape[0]):  
+  for c in range(A.shape[1]):  
+    soma = soma+A.item((l,c))
+print(A.sum(axis=0))
+[[ 6 12 12 14]]
+
+
+6) Ache recursivamente a soma dos números ímpares positivos até n:
+1 + 3 + 5 + 7 + 9 + 11 + .... n (n ímpar) ou
+1 + 3 + 5 + 7 + 9 + 11 + .... n-1 (n par)
+
+R:
+n = int(input('Digite o número: '))
+def soma_recursiva(n):
+  if n == 1:
+    return 1
+  else:
+    soma = 0
+    for x in range(1, n, 2):
+      soma = soma + x
+  return soma
+
+total = soma_recursiva(n)
+print('A soma de todos os números ímpares positivos até', n, 'é:', total)

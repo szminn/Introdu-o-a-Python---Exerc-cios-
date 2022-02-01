@@ -1,0 +1,63 @@
+#Listas e Tuplas
+
+lista = [12,10,7,5]
+lista_animais = ['cachorro','gato','elefante','lobo','arara']
+print(len(lista_animais))
+
+#print(type(lista))
+#print(lista_animais[1])
+#print(sum(lista))
+#print(max(lista))
+#print(min(lista))
+#print(min(lista_animais))
+
+# for x in lista_animais: # repetições com a lista
+#     print(x)
+# soma = 0
+# for y in lista:
+#     soma = soma + y
+#     resultadosoma = soma
+#     print(resultadosoma)
+
+# novalista = lista_animais * 3
+# print(novalista) #multiplicando a lista
+
+# if 'lobo' in lista_animais:
+#     print('existe um lobo na lista')
+# else:
+#     print('nao existe uma lobo na lista')
+#     lista_animais.append('lobo') #add elemento na lista
+#     print(lista_animais)
+#
+# lista_animais.pop() #remove o ultimo da lista
+# print(lista_animais)
+
+# lista_animais.pop(0) #remove o elemento escolhido
+# print(lista_animais)
+
+#lista_animais.remove('elefante') #remove o elemento escolhido'
+#print(lista_animais)
+
+#Ordenando a lista
+# lista.sort()
+# lista_animais.sort()
+# print(lista)
+# print(lista_animais)
+# lista_animais.reverse()
+# print(lista_animais)
+
+# lista_animais[0] = 'macaco'
+# print(lista_animais)
+
+#Tupla
+tupla =  (1,10,12,14)
+print(tupla[2])
+print(len(tupla))
+tupla_animal = tuple(lista_animais)
+print(type(tupla_animal))
+print(tupla_animal)
+print(type(lista_animais))
+print(lista_animais)
+lista_numerica = list(tupla)
+lista_numerica[0] = 100
+print((lista_numerica))

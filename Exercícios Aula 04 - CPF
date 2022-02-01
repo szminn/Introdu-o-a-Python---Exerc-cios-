@@ -1,0 +1,40 @@
+#Entrada de dados
+cpf = str(input('Digite o número do seu CPF: ')).replace('.', '').replace('-', '')
+while len(cpf) < 11 or len(cpf) > 11: #  Verificando quatidade de caracteres
+    cpf = input('O CPF é inválido. Digite novamente: ')
+
+numeroCPF = []
+for a in cpf: #Criando lista
+    a = int(a)
+    numeroCPF.append(a)
+
+#Verificando primeiro digito
+m1 = [10,9,8,7,6,5,4,3,2]
+soma1 = 0
+for i in range(9):
+  soma1 = soma1 + numeroCPF[i] * m1[i]
+
+verificador1 = ((soma1*10) % 11) % 10
+
+#Verificando segundo digito 
+m2 = [11,10,9,8,7,6,5,4,3,2]
+soma2 = 0
+for i in range(10):
+  soma2 = soma2 + numeroCPF[i] * m2[i]
+
+verificador2 = ((soma2*10) % 11) % 10
+if verificador1 == numeroCPF[9] and verificador2 == numeroCPF[10]:
+  print('CPF válido!')
+
+  #  o CPF foi cadastrado em...
+  if numeroCPF[8] == 0: print('CPF emitido no estado: Rio Grande do Sul')
+  elif numeroCPF[8] == 1: print('CPF emitido no estado: Distrito Federal, Goiás, Mato Grosso, Mato Grosso do Sul e Tocantins')
+  elif numeroCPF[8] == 2: print('CPF emitido no estado: Amazonas, Pará, Roraima, Amapá, Acre e Rondônia')
+  elif numeroCPF[8] == 3: print('CPF emitido no estado: Ceará, Maranhão e Piauí')
+  elif numeroCPF[8] == 4: print('CPF emitido no estado: Paraíba, Pernambuco, Alagoas e Rio Grande do Norte')
+  elif numeroCPF[8] == 5: print('CPF emitido no estado: Bahia e Sergipe')
+  elif numeroCPF[8] == 6: print('CPF emitido no estado: Minas Gerais')
+  elif numeroCPF[8] == 7: print('CPF emitido no estado: Rio de Janeiro e Espírito Santo')
+  elif numeroCPF[8] == 8: print('CPF emitido no estado: São Paulo')
+  elif numeroCPF[8] == 9: print('CPF emitido no estado: Paraná e Santa Catarina')
+else: print('CPF inválido.')
